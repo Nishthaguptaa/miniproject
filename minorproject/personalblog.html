@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "Learning about WEB DEVELOPMENT." />
+    <title>Web Development Minor Project </title>
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+      html{
+        overflow-x: hidden;
+      }
+        #header{
+            margin-top: -10px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            text-align: center;
+            background-color:black;
+            color:white;
+            padding:10px;
+        }
+        body{
+            padding-top: 10px;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            background-image:url(https://64.media.tumblr.com/f56205c30838b229934f2eb26d47c047/00c50dbb26b4434b-7a/s640x960/4346751c57500d5c9701362d6599535a4cb0cb62.png);
+            background-size: cover;
+            background-position: center;
+            max-width: 100%;
+            text-align: center;
+            margin:0 auto ;
+        }
+
+        #footer{
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            text-align:center;
+            background-color:black;
+            color:white;
+            padding: 0%;
+        }
+ #mynav{
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            text-align: center;
+            background-color:rgb(35, 22, 95);
+            color:white;
+            padding-top: 10px; 
+            padding-bottom: 0.25px;
+            z-index: 1;          
+ }
+
+ .sticky {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  
+}
+
+.sticky + .content {
+  padding-top: 50px;
+}
+
+
+        .intro {
+  position: relative;
+  width: 50px;
+  padding: 10px;
+  align-content: center;
+  display:inline-block;
+    margin: auto;
+            top: 0px;
+            left: 0px;
+            width: 55%;
+}
+
+.imageintro {
+  opacity: 1;
+  display: block;
+  height: auto;
+  margin: auto;
+  top: 0px;
+            left: 0px;
+            width: 65%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middleintro {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intror:hover .imageintro {
+  opacity: 0.3;
+}
+
+.intro:hover .middleintro {
+  opacity: 1;
+}
+
+.textintro {
+  background-color: #c76d62;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.slider {
+            width: 500px ;
+            height: 300px ;
+            background: url(https://www.homestratosphere.com/wp-content/uploads/2019/10/Office-multipe-monitors-oct3.jpg);
+            margin: auto;
+        position:relative;
+        animation-name: moveit;
+        animation-duration: 20s;
+        animation-iteration-count: infinite ;
+        
+        }
+        @keyframes moveit {
+            0%{background: url(https://res.cloudinary.com/practicaldev/image/fetch/s--DxkKjhGP--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s3un0bj59b1heym211tz.jpg);background-size: cover;}
+            25%{background: url(https://data.whicdn.com/images/355003978/original.jpg); background-size: cover;}
+            50%{background: url(https://console.kr-asia.com/wp-content/uploads/2021/06/fotis-fotopoulos-6sAl6aQ4OWI-unsplash-scaled.jpg);background-size: cover;}
+            75%{background: url(https://miro.medium.com/max/12000/1*iZCqQnP2fbpcwVo01G9qAw.jpeg);background-size: cover;}
+            100%{background: url(https://filmdaily.co/wp-content/uploads/2021/03/sw-lede.jpg); background-size: cover;}
+        }
+
+  .wave {
+  float: left;
+  margin: 20px;
+  margin-left: 10px;
+  padding: 70px;
+  animation: wave  ease-in-out 0.5s infinite alternate;
+  transform-origin: center -20px;
+}
+
+.wave:hover {
+  animation-play-state: paused;
+}
+
+.wave img {
+  border: 5px solid #f8f8f8;
+  display: block;
+  width: 200px;
+  height: 250px;
+}
+
+.wave figcaption {
+  text-align: center;
+}
+
+.wave:after{
+  content: '';
+  position: absolute;
+  width: 20px; 
+  height: 20px;
+  border: 1.5px solid #ffffff;
+  top: -10px; 
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+       
+.wave:before{
+  content: '';
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  display: block;
+  height: 44px;
+  width: 47px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  z-index: 16;
+}
+        
+@keyframes wave {
+  0% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+
+
+
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  bottom: 125px;
+  right: 28px;
+  width: 280px;
+margin-right: 5px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+#sec1{
+    display: inline-block;
+    border: 5px solid brown;
+    border-radius: 30px;
+    margin: auto;
+            top: 0px;
+            left: 0px;
+            width: 50%;
+            text-align: center;
+  background-color: whitesmoke;
+            color:black;
+            font-weight: bold;
+            font-size: 15px;
+            padding:20px;
+            position: relative;
+            opacity: 0.6;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 32.33%;
+  padding: 15px;
+  margin-left: 3px;
+  margin-right: 3px;
+  border: 5px solid black;
+  text-align: center;
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+a.ex1:hover, a.ex1:active {font-size: 110.5%; background: rgb(124, 122, 230);}
+a.ex2:hover, a.ex2:active {font-size: 110.5%; background: rgb(124, 122, 230);}
+a.ex3:hover, a.ex3:active {font-size: 110.5%;  background: rgb(124, 122, 230);}
+a.ex4:hover, a.ex4:active {font-size: 110.5%; background: rgb(124, 122, 230);}
+
+a.email:hover, a.email:active {font-size: 110%; background-color: mediumslateblue;}
+
+a.insta{position: absolute;}
+a.fb{position: absolute;}
+a.twitter{position: absolute;}
+a.yt{position: absolute;}
+a.share{position: absolute;}
+
+a.insta:hover, a.insta:active{font-size: 110%; padding: 1px 2px; }
+a.fb:hover, a.fb:active{font-size: 110%; padding: 1px 2px;}
+a.twitter:hover, a.twitter:active{font-size: 110%; padding: 1px 2px;}
+a.yt:hover, a.yt:active{font-size: 120%; padding: 1px 2px;}
+a.share:hover, a.share:active{font-size: 110%; padding: 1px 2px;}
+
+.inside{
+  list-style-position: inside;
+  list-style-type: square;
+}
+    </style>
+</head>
+<body>
+    <div align="center" div id="header">
+        <h1>Personal Blog</h1>
+    </div>
+
+    <div class="topnav" id="mynav">
+      <p>
+   <a href="#" style="color: white; text-decoration:none;" class="ex1" >Home</a>
+      <a href="#Quotes" style="color: white; text-decoration:none;"   class="ex2">Quotes</a>
+      <a href="#Reach" style="color: white; text-decoration:none;" class="ex3">Contact</a>
+      <a href="#About" style="color: white; text-decoration:none;" class="ex4">About</a></p>
+    </div>
+
+<div class="content">
+<nav align="center">
+    <br>
+    <font face = "Comic sans MS" size ="6" color = "white"> Hi there!</font><br>
+    <font face = "Comic sans MS" size ="5" color = "white"> Welcome to my Personal Blog <i class="bi bi-emoji-smile" style="font-size: 25px; color: whitesmoke;"></i></font><br></nav>
+
+
+<div align="center" class="intro">
+  <img src="https://i.pinimg.com/736x/03/5d/c2/035dc202c78257b2a96cd1ab35bb8a55.jpg" alt="introduction" class="imageintro" >
+  <div class="middleintro">
+    <div class="textintro">
+   <h3>NISHTHA'S SPACE</h3>
+    A PLATFORM TO INTRODUCE MYSELF IN BEST POSSIBLE WAY <BR>
+  </div>
+  </div>
+</div>
+
+
+<main>
+  <article>
+<div id="sec1"><article><section>
+<p>Hello! My name is Nishtha Gupta. &#x270C; 
+<br>I am a B.tech computer science engineering student studying in Jamia Millia Islamia(JMI), New Delhi, India.👩‍🎓</p>
+<p>Sincere, honest and hard-working. Striving to improve productivity. Want to learn and grow.&#9889;</p>
+<p>- I am currently looking for some Interesting Project to work on! &#x1F913; &#128373;<br> Also open to collaboration!&#x1F91D;</p>
+<p>- I am looking to collaborate on many open source projects &#128269; &#129488;</p>
+    <p>- I am currently learning Web Development&#x1F60E;&#128516;</p>
+    <p>-My field of interests are Designing, Programming ....&#128187; &#128270; </p>
+    <p>-I want to utilize my technical skills, experience and willingness to learn in making an organisation grow more and successful. <br> &#10024;&#127775; &#127879;</p>
+<p></p></section>
+</article></div>
+<br><br>
+</article>
+<br>
+<div id="Quotes">
+<center>
+<font color="white" size=6><marquee hspace="30%" loop="infinite" scrollamount="8" direction="right" behavior="alternate"><u>Inspirational Quotes</u></marquee>
+</font>
+</center>
+</div>
+
+<div style="margin-top: 20px;"  >
+
+  <figure class="wave">
+    <img src="https://i.pinimg.com/originals/61/8f/77/618f77f77050f93b8ff6d9cd9cf553f5.jpg" alt="quote1"></img>
+  <figcaption></figcaption>
+  </figure>
+
+  <figure class="wave">
+    <img src="https://i.pinimg.com/236x/3f/e8/b3/3fe8b3cee5b613376dce4af77ca2e6d5.jpg" alt="quote2"></img>
+    <figcaption></figcaption>
+  </figure>
+
+  <figure class="wave">
+    <img src="https://www.quotemaster.org/images/8b/8ba0965b58f59ff48499b49d92c8930f.png" alt="quote3"></img>
+    <figcaption></figcaption>
+  </figure>
+
+  <figure class="wave">
+    <img src="http://quotespictures.com/wp-content/uploads/2013/11/baseball-funny-code-quote.jpg" alt="quote4"></img>
+    <figcaption></figcaption>
+  </figure>
+
+</div>
+
+
+</main>
+
+<div id="Reach">
+<center>
+<font color="white" size=5><marquee direction="right" loop="infinite" scrollamount="10" width="100%" >ASK ME ANYTHING! <br> How to reach me: <a href="mailto:nishigupta.gupta9@gmail.com" class=email style="color: white; text-decoration:none; ">&#9993;Email me</a> </marquee></font></center>
+</div>
+<br><br>
+<div id="About">
+<font face="Brush Script MT" color="white"><h1>~~~~ABOUT ME~~~~</h1></font>
+</div> 
+<div class="row">
+  <div class="column">
+    <font face = "Courier New " size ="2" color = "white"> <h2><u>Language & libraries</u></h2></font>
+    <font face = " "  color = "white"><center> 
+    <p><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png" height="65px" width="65px">Html <br><img src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5351-css3_102605.png" height="80px" width="80px">Css</p><p><img src="https://pbs.twimg.com/profile_images/1273081551354396672/-Tzadxix.jpg" height="50px" width="50px"> Bootstrap</p>
+    <p><img src="https://paminus-kingori.github.io/portfolio/images/JS-Lo.png" height="50px" width="90px">Javascript</p>
+    <p><img src="https://buddymantra.com/wp-content/uploads/2020/12/mysqlw.jpg" height="50px" width="60px"> MYSQL</p>
+    <p><img src="https://www.pngitem.com/pimgs/m/355-3559358_c-and-c-logo-hd-png-download.png" height="50px" width="70px"> C/C++</p>
+  </center>
+  </font>
+  </div>
+  
+  <div class="column">
+    <font face = "Courier New "  color = "white"> <h2><u>Skills</u></h2></font>
+    <font face = "" color="white">
+    <dl>
+      <dt>PROGRAMING SKILLS-:</dt>
+        <dd>C, C++, HTML CSS JAVASCRIPT BOOTSTRAP MYSQL</dd><br>
+      <dt>PROJECTS-: </dt>
+        <dd>DBMS- e-commerce (flower management)(teamwork) (2021) <br>Simple Calculator <br>
+      <dt>LANGUAGES-:
+        <dd>English , Hindi</dd><br>
+      <dt>Other skills-:</dt>
+        <dd>excel(advance), MS Office, MS Powerpoint, MS Word</dd><br>
+    </dl>
+   </font>
+  </div>
+  
+  <div class="column">
+    <ul class="inside"><font face = "Courier New " size ="2" color = "white"> <h2><u>Achievements</u></h2></font>
+    <font face = "" color="white">
+     
+        <li>Stood 2ND in school in NCO CLASS 9TH</li><br>
+        <li>Stood 2ND in school in NCO CLASS 10TH</li><br>
+        <li>Stood 3RD in school in IMO CLASS 11TH</li><br>
+        <li>Stood 3RD in school in IEO CLASS 12TH</li><br>
+      </ul>
+      </font>
+  </div>
+</div>
+<br><br>
+
+<div class="slider"></div>
+
+<br><br>
+</div>
+<!--bottom of page-->
+<div class="box">
+	<a class="button" href="#popup1">Let me Pop up</a>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Here I am</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			Thanks to pop me out of that button, now that was the end of my blog, so you can close this window. Come by again!
+		</div>
+	</div>
+</div>
+<br><br>
+<div align="right">
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+  <center> <h1>Chat</h1></center> 
+
+   <center> <label for="msg"><b>Message</b></label></center>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+</div>
+<script>
+ 
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var topnav = document.getElementById("mynav");
+  var sticky = topnav.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      topnav.classList.add("sticky");
+    } else {
+      topnav.classList.remove("sticky");
+    }
+  }
+  </script>
+    <br>
+</div>
+    <div id="footer">
+        <h5 style="text-align: center;">Blog Made By Nishtha Gupta </h5>
+        <p>Contact me: XXXXXXXXXX <br> Copyright &copy; 2021, My Website<p><pre><a href="https://www.instagram.com" class="insta"><i class="bi bi-instagram" style="font: size 25px; color: purple;" ></i></a>   <a href="https://www.facebook.com" class="fb" ><i class="bi bi-facebook" style="font: size 25px; color: rgb(28, 117, 201);" ></i></a>   <a href="https://www.twitter.com" class="twitter"><i class="bi bi-twitter" style="font: size 25px; color: rgb(0, 22, 224);" ></i></a>   <a href="https://www.youtube.com" class="yt"><i class="bi bi-youtube" style="font: size 25px; color: rgb(238, 10, 10);" ></i></a>   <a href="#" class="share"><i class="bi bi-share" style="font-size: 15px; color: teal;"></i></a></pre>
+    </div>
+</body>
+</html>
